@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { CustomFetch } from './CustomFetch';
+import ItemList from './ItemList';
+import Product from './Product';
 
-const ItemListContainer = ({saludo, greeting}) => {
+const ItemListContainer = ({greeting}) => {
+
+  const [listProducts, setListProducts] = useState([]) 
+  
+useEffect(()=>{
+  CustomFetch(Product)
+  .then(data=> setListProducts(data))
+},[])
+
+  console.log(listProducts)
   return (
-    <div>
-        <p>{saludo}</p>
-        <p>{greeting}</p>
-    </div>
+    <>
+    <ItemList listProducts={listProducts}/>
+    <div>{greeting}</div>
+    </>
   )
 }
 
