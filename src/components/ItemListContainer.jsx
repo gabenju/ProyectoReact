@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ItemList from './ItemList';
 
 const productos = [
   {
@@ -83,8 +84,9 @@ export default function ItemListContainer() {
  
   return (
     <>
-      <div>{JSON.stringify(products)}</div>
+    <ItemList listProducts={productos}/>
     </>
+    
   )
 }
 
