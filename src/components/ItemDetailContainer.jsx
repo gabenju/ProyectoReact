@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { CustomFetch } from './CustomFetch';
+import ItemList from './ItemList';
 
 const productos = [
   {
@@ -68,20 +70,27 @@ const productos = [
 export default function ItemDetailContainer() {
     const { idcategory, idproduct } = useParams();
 
-    const [productos, setProducts] = useState();
+    const [listProducts, setListProducts] = useState([]) 
+
+    useEffect(()=>{
+      CustomFetch(productos)
+      .then(data=> setListProducts(data))
+    },[])
 
     useEffect(() => {
       if (!idproduct) {
   
-        setProducts(productos);
+        setListProducts(productos);
       } else {
   
-        setProducts(productos.filter((product) => product.idproduct == idproduct));
+        setListProducts(productos.filter((product) => product.idproduct == idproduct));
       }
     }, [idproduct]);
 
   return (
-    <div> ItemDetailContainer </div>
+    <>
+    <ItemList listProducts={listProducts}/>
+    </>
     
   )
 }
