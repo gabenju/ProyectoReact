@@ -65,37 +65,23 @@ const productos = [
   }
 ];
 
-export default function ItemListContainer() {
-  const { idcategory, idproduct } = useParams();
+export default function ItemDetailContainer() {
+    const { idcategory, idproduct } = useParams();
 
-  const [products, setProducts] = useState();
+    const [productos, setProducts] = useState();
 
-  useEffect(() => {
-    if (!idcategory) {
+    useEffect(() => {
+      if (!idproduct) {
+  
+        setProducts(productos);
+      } else {
+  
+        setProducts(productos.filter((product) => product.idproduct == idproduct));
+      }
+    }, [idproduct]);
 
-      setProducts(productos);
-    } else {
-
-      setProducts(productos.filter((product) => product.idcategory == idcategory));
-    }
-  }, [idcategory]);
-
- 
   return (
-    <>
-      <div>{JSON.stringify(products)}</div>
-    </>
+    <div> ItemDetailContainer </div>
+    
   )
 }
-
-
-
-/*
-const [listProducts, setListProducts] = useState([]) 
-*/
-/*
-    useEffect(()=>{
-    CustomFetch(Product)
-    .then(data=> setListProducts(data))
-  },[idcategory])
-*/

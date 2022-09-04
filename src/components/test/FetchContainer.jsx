@@ -4,11 +4,10 @@ import FetchLayout from './FetchLayout';
 export default function FetchContainer() {
   const [actividad, setActividad] = useState({});
   useEffect(() => {
-    console.log(actividad)
-    fetch('https://swapi.dev/api/people/')
+    fetch('https://www.boredapi.com/api/activity')
       .then((res) => res.json())
       .then((json) => {
-        setActividad(json.results);
+        setActividad(json);
       })
       .catch((e) => console.log(e))
       .finally(() => console.log('lo ultimo que hago'));
@@ -16,3 +15,14 @@ export default function FetchContainer() {
   return (
   <FetchLayout actividad={actividad} />);
 }
+
+
+/*
+, {
+      method: 'POST', 
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: {id: 128, name:'Gonza'},
+    }
+*/
