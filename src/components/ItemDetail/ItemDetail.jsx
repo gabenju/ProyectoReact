@@ -30,17 +30,3 @@ const Item = ({Product}) => {
 
 export default Item
 
-/*
-import React from 'react'
-
-const Item = ({Product}) => {
-  return (
-    <div>
-        <p>{Product.nombre}</p>
-        <p>{Product.precio}</p>
-        <p>{Product.img}</p>
-    </div>
-  )
-}
-
-export default Item*/

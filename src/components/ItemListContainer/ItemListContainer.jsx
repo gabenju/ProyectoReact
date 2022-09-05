@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { CustomFetch } from './CustomFetch';
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
 
 const productos = [
   {
@@ -67,30 +66,38 @@ const productos = [
   }
 ];
 
-export default function ItemDetailContainer() {
-    const { idcategory, idproduct } = useParams();
+export default function ItemListContainer() {
+  const { idcategory, idproduct } = useParams();
 
-    const [listProducts, setListProducts] = useState([]) 
+  const [products, setProducts] = useState();
 
-    useEffect(()=>{
-      CustomFetch(productos)
-      .then(data=> setListProducts(data))
-    },[])
+  useEffect(() => {
+    if (!idcategory) {
 
-    useEffect(() => {
-      if (!idproduct) {
-  
-        setListProducts(productos);
-      } else {
-  
-        setListProducts(productos.filter((product) => product.idproduct == idproduct));
-      }
-    }, [idproduct]);
+      setProducts(productos);
+    } else {
 
+      setProducts(productos.filter((product) => product.idcategory == idcategory));
+    }
+  }, [idcategory]);
+
+ 
   return (
     <>
-    <ItemList listProducts={listProducts}/>
+    <ItemList listProducts={productos}/>
     </>
     
   )
 }
+
+
+
+/*
+const [listProducts, setListProducts] = useState([]) 
+*/
+/*
+    useEffect(()=>{
+    CustomFetch(Product)
+    .then(data=> setListProducts(data))
+  },[idcategory])
+*/
