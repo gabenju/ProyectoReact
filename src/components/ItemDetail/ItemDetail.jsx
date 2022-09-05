@@ -1,6 +1,8 @@
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 const Item = ({Product}) => {
         console.log(Product)
     return (
