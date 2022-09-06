@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logoWN from "../../assets/logoWN.png";
+import CartWidget from "../CartWidget/CartWidget";
 
 export default function NavigationBar() {
   return (
@@ -27,6 +28,7 @@ export default function NavigationBar() {
               <Nav.Link href="#pricing">Destacados</Nav.Link>
             </Link>
           </Nav>
+          <CartWidget counter={7}/>
         </Container>
       </Navbar>
     </div>

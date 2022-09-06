@@ -2,8 +2,6 @@ import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 
-
-
 const ItemDetail = ({Product}) => {
     const {stock}= Product
         
@@ -24,7 +22,7 @@ const ItemDetail = ({Product}) => {
                         {Product.detail}
                     </div>                   
                     <div className="card-footer">
-                        {`precio ${Product.precio}`}
+                        {`precio ${Product.price}`}
                     </div>
                     <div className="card-footer">
                         {`Stock: ${Product.stock}`}

@@ -3,9 +3,9 @@ const Product = [
       id: "01",
       name: "Gin Bosque + 2 Paso De Los Toros Tonica 1,5lt",
       price: 3000,
-      detail: "Gin Bosque + 2 Paso De Los Toros Tonica 1,5lt",
+      description: "Gin Bosque + 2 Paso De Los Toros Tonica 1,5lt",
       img: "https://i.postimg.cc/kMfDYdPn/gin-tonica.jpg",
-      idcategory: "destilados",
+      category: "destilados",
       stock:10,
       /*
       
@@ -19,9 +19,9 @@ const Product = [
       id: "02",
       name: "Campari",
       price: 2000,
-      detail: "Pack: Campari + 2 Naranja Pura Frutta",
+      description: "Pack: Campari + 2 Naranja Pura Frutta",
       img: "https://i.postimg.cc/63S6wBWR/campari-naranja.jpg",
-      idcategory: "aperitivos",
+      category: "aperitivos",
       stock:10,
       /*
       
@@ -35,9 +35,9 @@ const Product = [
       id: "03",
       name: "Absolut",
       price: 5000,
-      detail: "Pack: Absolut Original 700ml + 2 Citric De Naranja + 4 Vasos",
+      description: "Pack: Absolut Original 700ml + 2 Citric De Naranja + 4 Vasos",
       img: "https://i.postimg.cc/YCgnSf1j/combo-absolut.jpg",
-      idcategory: "destilados",
+      category: "destilados",
       stock:5,
       /*
       
@@ -51,9 +51,9 @@ const Product = [
       id: "4",
       name: "Patagonia 24.7",
       price: 2900,
-      detail: "Pack: 12 Patagonia 24.7",
+      description: "Pack: 12 Patagonia 24.7",
       img:"https://i.postimg.cc/hG3hXx8Q/pack-247.jpg",
-      idcategory: "cerveza",
+      category: "cerveza",
       stock:"20",
       /*
       
