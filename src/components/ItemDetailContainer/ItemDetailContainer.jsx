@@ -1,12 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Product from "../../ProductMock/Product";
+import {data} from "../../ProductMock/Product";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
-export default function ItemDetailContainer() {
-  const { idcategory, idproduct } = useParams();
-  const [product, setProducts] = useState([]);
 
-  useEffect(() => {
+const ItemDetailContainer = () => {
+  const [productDetail, setProductDetail]= useState({})
+  const [loading, setLoading]= useState(true)
+  const{id}=useParams()
+
+  useEffect(()=>{
+      data
+      .then((res)=> setProductDetail(res.find((item)=> item.id === id)))
+      .catch((error)=> console.log(error))
+      .finally(()=> setLoading(false))
+  },[id])
+ 
+return (
+  <div>
+     {loading ? <p>Loading...</p> : <ItemDetail productDetail={productDetail}/>}
+  </div>
+)
+}
+
+export default ItemDetailContainer
+
+
+/*  const [listProduct, setListProduct] = useState([]) */
+
+/* RUTA ITEMDETAIL
     if (!idproduct) {
       setProducts(Product);
     } else {
@@ -14,11 +36,4 @@ export default function ItemDetailContainer() {
         Product.filter((product) => product.idproduct == idproduct)
       );
     }
-  }, [idproduct]);
-
-  return (
-    <>
-      <div>{JSON.stringify(product)}</div>
-    </>
-  );
-}
+  }, [idproduct]);*/

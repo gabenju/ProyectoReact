@@ -1,34 +1,30 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 
 const ItemCount = ({initial, stock, onAdd}) => {
-  const [counter, setCounter] = useState (initial)
-const increase = () => {
-  setCounter (counter + 1)
-}
-const decrease = () => {
-  setCounter (counter - 1)
-}
+    const[count, setCount]= useState(initial)
+
+    const restar = () => {
+        if(count > initial){
+            setCount(count-1)
+        }
+    }
+
+    const sumar=()=>{
+        if(count<stock){
+            setCount(count + 1)
+        }
+    }
 
   return (
+    <>
     <div>
-       <button onClick={decrease}> - </button>
-      <button onClick={increase}> + </button>
-     
-      <h1>{counter}</h1>
+        <button className='btn btn-success' onClick={restar}>-</button>
+        <span  className='btn btn-light'>{count}</span>
+        <button  className='btn btn-danger'onClick={sumar}>+</button>
     </div>
+        <button  className='btn btn-primary m-3'onClick={onAdd}>comprar</button>
+    </>
   )
 }
 
 export default ItemCount
-
-
-/*        <button disabled={counter <= 1} onClick={() =>{
-        setCounter(counter - 1)
-      } }>-</button>
-      <span>{counter} clicks</span>
-      <button disabled={counter >= stock} onClick={() =>{
-        setCounter(counter + 1)
-      } }>+</button>
-      <div>
-      <button> Agregar al carrito</button>
-      </div>*/

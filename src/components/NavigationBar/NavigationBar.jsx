@@ -23,7 +23,7 @@ export default function NavigationBar() {
             <Link to="/category/aperitivos">
               <Nav.Link href="#features">Aperitivos</Nav.Link>
             </Link>
-            <Link to="/product/4">
+            <Link to="/category/cerveza">
               <Nav.Link href="#pricing">Destacados</Nav.Link>
             </Link>
           </Nav>
