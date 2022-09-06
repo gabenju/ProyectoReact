@@ -2,6 +2,7 @@ import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 
+
 const ItemDetail = ({Product}) => {
     const {stock}= Product
         
@@ -19,7 +20,7 @@ const ItemDetail = ({Product}) => {
                     <img src={Product.img} alt="logo"/>
                     </div>
                     <div className ="list-group-item">
-                        {Product.detail}
+                        {Product.description}
                     </div>                   
                     <div className="card-footer">
                         {`precio ${Product.price}`}
@@ -28,7 +29,7 @@ const ItemDetail = ({Product}) => {
                         {`Stock: ${Product.stock}`}
                     </div>
                     <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
-                    <Nav.Link href={`/item/${Product.id}`}>
+                    <Nav.Link href={`/itemDetail/${Product.id}`}>
                     <button className="btn btn-outline-warning btn-block">Detalles</button>
                     </Nav.Link>
                   

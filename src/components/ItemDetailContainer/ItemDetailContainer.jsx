@@ -7,14 +7,14 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
   const [productDetail, setProductDetail]= useState({})
   const [loading, setLoading]= useState(true)
-  const{id}=useParams()
+  const{idproduct}=useParams()
 
   useEffect(()=>{
       data
-      .then((res)=> setProductDetail(res.find((item)=> item.id === id)))
+      .then((res)=> setProductDetail(res.find((item)=> item.id === idproduct)))
       .catch((error)=> console.log(error))
       .finally(()=> setLoading(false))
-  },[id])
+  },[idproduct])
  
 return (
   <div>
