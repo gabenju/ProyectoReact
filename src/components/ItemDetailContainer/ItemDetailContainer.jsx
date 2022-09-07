@@ -11,14 +11,21 @@ const ItemDetailContainer = () => {
 
   useEffect(()=>{
       data
-      .then((res)=> setProductDetail(res.find((item)=> item.id === idproduct)))
+      .then((res)=> {
+        if(idproduct){
+          const found = res.find(item => item.id === idproduct);
+          setProductDetail(found);
+        }else{
+          setProductDetail({})
+        }
+      })
       .catch((error)=> console.log(error))
       .finally(()=> setLoading(false))
   },[idproduct])
  
 return (
   <div>
-     {loading ? <p>Loading...</p> : <ItemDetail productDetail={productDetail}/>}
+     {loading ? <p>Loading...</p> : <ItemDetail Product={productDetail}/>}
   </div>
 )
 }
@@ -26,9 +33,9 @@ return (
 export default ItemDetailContainer
 
 
-/*  const [listProduct, setListProduct] = useState([]) */
+/*  const [listProduct, setListProduct] = useState([]) /
 
-/* RUTA ITEMDETAIL
+/ RUTA ITEMDETAIL
     if (!idproduct) {
       setProducts(Product);
     } else {

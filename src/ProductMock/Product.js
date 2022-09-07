@@ -52,7 +52,7 @@ const Product = [
       id: "4",
       name: "Patagonia 24.7",
       price: 2900,
-      description: "Acá encontrás delivery de Pack: 12 Patagonia 24.7 a precio de mercado",
+      description: "Pack: 12 Patagonia 24.7",
       img:"https://i.postimg.cc/hG3hXx8Q/pack-247.jpg",
       category: "cerveza",
       stock:"20",
