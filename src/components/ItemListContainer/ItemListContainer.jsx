@@ -25,57 +25,8 @@ useEffect(()=>{
 
   return (
     <div>
-      {loading ? <p>Loading...</p>:<ItemList productList={productList}/>}
+      {loading ? <p className="loader">$</p> :<ItemList productList={productList}/>}
     </div>
   );
 }
 
-
-/*export default function ItemListContainer() {
-
-  const { idcategory, idproduct } = useParams();
-  const [product, setProducts] = useState([])
-  const [listProduct, setListProduct] = useState([]) 
-  const [loading, setLoading]= useState(false)
-  
-
-
-  useEffect(() => {
-    if (!idcategory) {
-      setProducts(Product);
-    } else {
-      setProducts(
-        Product.filter((product) => product.idcategory === idcategory)
-      );
-    }
-  }, [idcategory]);*/
-/*
-  const data = new Promise((resolve, reject)=>{
-    let condition = true
-    setTimeout(()=>{
-      if(condition){
-        resolve(product)
-      }else{
-        reject('salio mal uwu')
-      }
-    },2000)
-  })
-  useEffect(()=>{
-    setLoading(true)
-    data
-    .then((res)=>
-    setlistProduct(res))
-    .catch((error)=> console.log(error))
-    .finally(()=> setLoading(false))
-  }, [])*/
-
-
-/*
-const [listProducts, setListProducts] = useState([]) 
-*/
-/*
-    useEffect(()=>{
-    CustomFetch(Product)
-    .then(data=> setListProducts(data))
-  },[idcategory])
-*/

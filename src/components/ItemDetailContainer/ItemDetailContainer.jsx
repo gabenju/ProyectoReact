@@ -25,22 +25,12 @@ const ItemDetailContainer = () => {
  
 return (
   <div>
-     {loading ? <p>Loading...</p> : <ItemDetail Product={productDetail}/>}
+     {loading ? <p className="loader">$</p> : <ItemDetail Product={productDetail}/>}
+
+
   </div>
 )
 }
 
 export default ItemDetailContainer
 
-
-/*  const [listProduct, setListProduct] = useState([]) /
-
-/ RUTA ITEMDETAIL
-    if (!idproduct) {
-      setProducts(Product);
-    } else {
-      setProducts(
-        Product.filter((product) => product.idproduct == idproduct)
-      );
-    }
-  }, [idproduct]);*/

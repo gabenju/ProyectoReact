@@ -10,9 +10,9 @@ const ItemDetail = ({Product}) => {
         console.log('compraste')
     }
     return (
-        <div className="container">
+        <div className="productContainer">
             <div className="row">
-        <div key={Product.id} className='card w-50 mt-2'>
+        <div key={Product.id} className='card'>
                     <div className="card-header">
                         {Product.name}
                     </div>
