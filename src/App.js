@@ -1,9 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
+import Cart from './components/Cart/Cart';
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idcategory" element={<ItemListContainer />} />
           <Route path="/description/:idproduct" element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
     </>
@@ -25,11 +29,10 @@ export default App;
 
 
 
-/*      
-      <ItemListContainer />
+/*   
+          <Route path="/test" element={<Test />} />
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:idcategory" element={<ItemListContainer />} />
+          <Route path="/description/:idproduct" element={<ItemDetailContainer />} />
 
-<h1> Proyecto E-Commerce </h1>
-      <ItemCount initial={1} stock={7} />
-  <FetchContainer />*/
-
-  /*    */
+  */
