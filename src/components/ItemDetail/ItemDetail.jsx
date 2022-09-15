@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
-import Nav from 'react-bootstrap/Nav'
+import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { useCart } from '../../context/CartContext';
 
 
 const ItemDetail = ({Product}) => {
@@ -10,9 +11,19 @@ const ItemDetail = ({Product}) => {
     const [compra, setCompra]= useState(false)
     const {stock, name, price, img, id}= Product;
     const navegar = useNavigate()
+    const {addItem}=useCart()
     const onAdd = () => {
-        console.log(`Compraste ${count}, items del producto ${name}!`)
+        let purchase = {
+            id,
+            name,
+            price,
+            stock,
+            img,
+            quantity: count
+        }
+        //console.log(`Compraste ${count}, items del producto ${name}!`)
         setCompra(true)
+        addItem(purchase)
     }
 
 
@@ -36,7 +47,7 @@ const ItemDetail = ({Product}) => {
                     <div className="card-footer">
                         {`Stock: ${Product.stock}`}
                     </div>
-                    <Nav.Link href={`/description/${Product.id}`}>
+                    <Nav.Link onClick={()=>navegar(`/description/${Product.id}`)}>
                     <button className="btn btn-outline-warning btn-block">Detalles</button>
                     </Nav.Link>
                     { !compra 

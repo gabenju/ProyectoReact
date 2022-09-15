@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import logoWN from "../../assets/logoWN.png";
+
 import CartWidget from "../CartWidget/CartWidget";
 
 export default function NavigationBar() {
