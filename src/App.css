@@ -24,7 +24,6 @@ body{
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -63,13 +62,14 @@ body{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }}
   
+  .fonts{
+    color:white;
+    font-size: large;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-decoration: none;
+  
+  }
 
-.fonts{
-  color:white;
-  font-size: large;
-  font-family: 'Bai Jamjuree', sans-serif;
-
-}
 .productContainer{
   display: flex;
   flex-direction: row;

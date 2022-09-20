@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import { useCart } from '../../context/CartContext';
 
-const CartWidget = ({counter}) => {
+const CartWidget = () => {
+  const{cartQuantity, cart} =useCart()
   return (
     <div>
-       <span>🛒</span> 
-       <span>{counter}</span>
+       <LocalMallIcon color='light' fontSize='large'/>
+        <span>{cartQuantity() || ''}</span>
+
     </div>
   )
 }

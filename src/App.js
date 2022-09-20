@@ -6,6 +6,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Cart from "./components/Cart/Cart";
 import {CartProvider} from "./context/CartContext";
+import Test from "./test/Test";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <NavigationBar />
         <Routes>
+          <Route path='/test' element={<Test />}/>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idcategory" element={<ItemListContainer />} />
           <Route path="/description/:idproduct" element={<ItemDetailContainer />} />
