@@ -1,12 +1,11 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Cart from "./components/Cart/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Cart from "./components/Cart/Cart";
-import {CartProvider} from "./context/CartContext";
-import Test from "./test/Test";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
       <BrowserRouter>
         <NavigationBar />
         <Routes>
-          <Route path='/test' element={<Test />}/>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idcategory" element={<ItemListContainer />} />
           <Route path="/description/:idproduct" element={<ItemDetailContainer />} />

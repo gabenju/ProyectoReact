@@ -16,7 +16,7 @@ console.log(cart)
           <h4>Te invitamos a seguir comprando!</h4>
           <button className='btn btn-success' onClick={()=>navegar('/')}>Ir a comprar</button>
         </div>
-        :<div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+        :<div style={{display:'flex', flexDirection:'column', alignItems:'center', backgroundColor:'white'}}>
           <h2>Tus Compras</h2>
             {cart.map((compra)=> <CartItem key={compra.id} compra={compra}/>)}
             <span>Total a pagar : ${cartTotal()}</span>

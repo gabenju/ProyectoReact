@@ -19,14 +19,14 @@ export default function NavigationBar() {
           </Navbar.Brand>
           </Link>
           <Nav className="me-auto">
-            <Link className="fonts" to="/category/destilados">
-              <Nav.Link href="#home">Destilados</Nav.Link>
+            <Link  to="/category/destilados">
+              <Nav.Link className="fonts" href="#home">Destilados</Nav.Link>
             </Link>
-            <Link className="fonts" to="/category/aperitivos">
-              <Nav.Link  href="#features">Aperitivos</Nav.Link>
+            <Link  to="/category/aperitivos">
+              <Nav.Link className="fonts"  href="#features">Aperitivos</Nav.Link>
             </Link>
-            <Link className="fonts" to="/category/cerveza">
-              <Nav.Link  href="#pricing">Destacados</Nav.Link>
+            <Link  to="/category/cerveza">
+              <Nav.Link className="fonts" href="#pricing">Destacados</Nav.Link>
             </Link>
           </Nav>
           <NavLink className="fonts" to='/cart'>
