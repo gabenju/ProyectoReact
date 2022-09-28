@@ -33,18 +33,3 @@ export default function ItemListContainer() {
   );
 }
 
-/*Mock
-useEffect(()=>{
-  setLoading(true)
-    data
-    .then((res)=>{
-      if(idcategory){
-        setProductList(res.filter((item)=> item.category === idcategory))
-      }else{
-        setProductList(res)
-      }
-    })
-    .catch((error)=> console.log(error))
-    .finally(()=> setLoading(false))
-  }, [idcategory])
-  */

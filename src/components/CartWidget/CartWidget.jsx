@@ -1,5 +1,5 @@
-import React from 'react'
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import React from 'react';
 import { useCart } from '../../context/CartContext';
 
 const CartWidget = () => {

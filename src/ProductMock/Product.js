@@ -1,4 +1,4 @@
-const Product = [
+export const Product = [
     {
       id: "01",
       name: "Gin Bosque + 2 Paso De Los Toros Tonica 1,5lt",
@@ -65,17 +65,16 @@ const Product = [
       473ml",*/
     }
   ]
-  
-  export const data = new Promise((resolve, reject) => {
-    //acciones
-    let condition = true
-    setTimeout(()=> {
-      if(condition){
-        resolve(Product)
-      }else{
-        reject('salio mal')
-      }
 
-    },3000)
 
-  })
+  // coloco esto en App.js y subo a firebase los nuevos productos
+
+  // import { useEffect } from "react"
+  // import {addDoc, collection} from "../../firebase/firebase";
+  // import { db } from "../../firebase/firebase";
+  // import { Product } from '../../ProductMock/Product';
+
+  // useEffect(()=>{
+  //   const productosCollecction = collection(db, "products")
+  //   product.map((item)=> addDoc(productosCollecction, item))
+  // }, [])
