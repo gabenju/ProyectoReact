@@ -21,7 +21,6 @@ const ItemDetail = ({Product}) => {
             img,
             quantity: count
         }
-        //console.log(`Compraste ${count}, items del producto ${name}!`)
         setCompra(true)
         addItem(purchase)
     }

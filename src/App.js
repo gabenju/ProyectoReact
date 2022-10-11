@@ -28,15 +28,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-/*   
-
-
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:idcategory" element={<ItemListContainer />} />
-          <Route path="/description/:idproduct" element={<ItemDetailContainer />} />
-
-  */

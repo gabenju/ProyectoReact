@@ -36,18 +36,3 @@ return (
 
 export default ItemDetailContainer
 
-/*Mock
-  useEffect(()=>{
-      data
-      .then((res)=> {
-        if(idproduct){
-          const found = res.find(item => item.id === idproduct);
-          setProductDetail(found);
-        }else{
-          setProductDetail({})
-        }
-      })
-      .catch((error)=> console.log(error))
-      .finally(()=> setLoading(false))
-  },[idproduct])
-  */

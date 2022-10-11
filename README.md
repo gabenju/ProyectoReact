@@ -37,7 +37,9 @@ _En tu consola de VSC, escribe "npm run start"
 
 ## Construido con: 🛠️
 
-* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) Ya venia trabajando con Boostrap y me ayudo a construir todo mas sencillo.
+* [Material UI](https://mui.com/material-ui/getting-started/overview/) Me gusto su interfaz visual.
+* [Firebase](https://firebase.google.com/?hl=es-419) Me ayudo para guardar mis datos y me parecio rapido para cargar los objetos.
 
 
 ## Autores ✒️
